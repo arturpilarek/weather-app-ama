@@ -1,0 +1,22 @@
+{
+  "name": "weatherappama",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w styles/scss/main.scss -o styles/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturpilarek/weather-app-ama.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturpilarek/weather-app-ama/issues"
+  },
+  "homepage": "https://github.com/arturpilarek/weather-app-ama#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
