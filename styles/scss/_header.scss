@@ -1,0 +1,31 @@
+.header {
+  @include flex;
+  justify-content: space-between;
+  .logo-searchbar-wrapper {
+    @include flex-center();
+    gap: 75px;
+  }
+  &__search-bar {
+    display: block;
+    width: 475px;
+    height: 50px;
+    border: 2px solid $accent-navy-blue;
+    //background-color: transparent;
+    border-radius: 26px;
+    padding: 1em 2em;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      height: 39px;
+      width: 56px;
+      position: absolute;
+      top: 100px;
+      left: 0;
+      margin: 2px;
+      background: url("/Assets/icons/carbon_search.svg") 0 0 no-repeat;
+      z-index: 3;
+    }
+  }
+}
+

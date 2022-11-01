@@ -1,10 +1,20 @@
+@import "mixins";
+@import "variables";
+@import "header";
+
+* {
+  box-sizing: border-box;
+}
 h1 {
   color: blue
 }
 
 body {
-  background-color: red;
-  div {
+  padding: 25px 85px;
+  background: linear-gradient(180deg, #8FA5B7 0%, #111C34 46.11%) no-repeat;
+  height: 100vh;
+  section {
     font-size: 2rem;
   }
 }
+
