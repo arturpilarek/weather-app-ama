@@ -1,0 +1,43 @@
+.current-weather {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 8rem;
+
+    img {
+        width: 20rem;
+    }
+
+    &__info {
+        width: 20rem;
+        .city-wrapper {
+            margin-bottom: 2rem;
+            h2 {
+                color: $accent-orange;
+                font-size: $text-xl;
+                margin-bottom: 0;
+            }
+            span {
+                font-style: italic;
+                color: white;
+            }
+        }
+        .parameter-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            img {
+                width: 1.2rem;
+            }
+
+            .small-text {
+                font-size: $text-small;
+            }
+
+        }
+    }
+}

@@ -2,6 +2,7 @@
 @import "mixins";
 @import "variables";
 @import "header";
+@import "current-weather";
 
 * {
   box-sizing: border-box;
@@ -13,7 +14,7 @@ h1 {
 
 body {
   padding: 25px 85px;
-  background: linear-gradient(180deg, #8FA5B7 0%, #111C34 46.11%) no-repeat;
+  background: linear-gradient(180deg, #8FA5B7 0%, #111C34 100%) no-repeat;
   height: 100vh;
   section {
     font-size: 2rem;
