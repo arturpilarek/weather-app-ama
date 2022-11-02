@@ -32,7 +32,7 @@ function createBasicWeatherDisplay (weather) {
                 <h2>${cityName[0].toUpperCase()}</h2>
                 <span>${cityName[1]}, ${cityName[2]}</span>
             </div>
-            <p>Lige nu:</p>
+            <p class="now">Lige nu:</p>
             <div class='parameter-wrapper'>
                 <img src='./Assets/icons/weather-icons/temperature-icon.svg'>
                 <p>${currentWeather.temp}° <span class='small-text'>- føles som ${currentWeather.feelslike}°</span></p>

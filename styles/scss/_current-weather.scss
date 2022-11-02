@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    padding: 8rem;
+    padding: 6rem;
 
     img {
         width: 20rem;
@@ -18,22 +18,32 @@
             h2 {
                 color: $accent-orange;
                 font-family: $family-barlow;
-                letter-spacing: 0.2rem;
                 font-size: $text-xl;
+                font-weight: 500;
                 margin-bottom: 0;
             }
             span {
+                font-size: $text-small;
                 font-style: italic;
                 color: white;
             }
         }
+        .now {
+            margin-bottom: 21px;
+        }
         .parameter-wrapper {
             display: flex;
             flex-direction: row;
+            align-items: center;
             gap: 1rem;
+            margin-bottom: 21px;
 
             img {
-                width: 1.2rem;
+                height: 18px;
+                width: 18px;
+            }
+            p {
+                margin: 0;
             }
 
             .small-text {

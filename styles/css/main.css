@@ -49,7 +49,7 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  padding: 8rem; }
+  padding: 6rem; }
   .current-weather img {
     width: 20rem; }
   .current-weather__info {
@@ -59,18 +59,26 @@
       .current-weather__info .city-wrapper h2 {
         color: #F8D047;
         font-family: "Barlow Condensed", sans-serif;
-        letter-spacing: 0.2rem;
         font-size: 36px;
+        font-weight: 500;
         margin-bottom: 0; }
       .current-weather__info .city-wrapper span {
+        font-size: 12px;
         font-style: italic;
         color: white; }
+    .current-weather__info .now {
+      margin-bottom: 21px; }
     .current-weather__info .parameter-wrapper {
       display: flex;
       flex-direction: row;
-      gap: 1rem; }
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 21px; }
       .current-weather__info .parameter-wrapper img {
-        width: 1.2rem; }
+        height: 18px;
+        width: 18px; }
+      .current-weather__info .parameter-wrapper p {
+        margin: 0; }
       .current-weather__info .parameter-wrapper .small-text {
         font-size: 12px; }
 
