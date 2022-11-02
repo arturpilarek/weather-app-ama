@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Montserrat:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 @import "mixins";
 @import "variables";
 @import "header";
 
 * {
   box-sizing: border-box;
+  font-family: $family-montserrat;
 }
 h1 {
   color: blue
