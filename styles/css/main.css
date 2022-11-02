@@ -58,6 +58,8 @@
       margin-bottom: 2rem; }
       .current-weather__info .city-wrapper h2 {
         color: #F8D047;
+        font-family: "Barlow Condensed", sans-serif;
+        letter-spacing: 0.2rem;
         font-size: 36px;
         margin-bottom: 0; }
       .current-weather__info .city-wrapper span {
@@ -81,7 +83,6 @@ h1 {
 
 body {
   padding: 25px 85px;
-  background: linear-gradient(180deg, #8FA5B7 0%, #111C34 100%) no-repeat;
-  height: 100vh; }
+  background: linear-gradient(180deg, #8FA5B7 0%, #111C34 100%) no-repeat; }
   body section {
     font-size: 2rem; }
