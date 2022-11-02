@@ -2,29 +2,38 @@
   @include flex;
   justify-content: space-between;
   .logo-searchbar-wrapper {
-    @include flex-center();
+    @include flex-center;
     gap: 75px;
   }
+  .search-input {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+    }
+  }
   &__search-bar {
-    display: block;
+    @include flex-center;
     width: 475px;
     height: 50px;
     border: 2px solid $accent-navy-blue;
     //background-color: transparent;
     border-radius: 26px;
-    padding: 1em 2em;
+    padding: 0.4em 1em;
     position: relative;
     &:after {
       content: "";
       display: block;
-      height: 39px;
-      width: 56px;
-      position: absolute;
-      top: 100px;
-      left: 0;
-      margin: 2px;
       background: url("/Assets/icons/carbon_search.svg") 0 0 no-repeat;
-      z-index: 3;
+      height: 32px;
+      width: 32px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 25px;
     }
   }
 }
