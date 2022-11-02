@@ -1,11 +1,27 @@
 const api_url = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/kolding?unitGroup=metric&key=FU7XFQM4A2CKKUUT4JXHP2EX5&contentType=json"
 const searchInput = document.getElementById("searchInput")
+const searchIcon = document.getElementById("searchIcon")
 
 searchInput.addEventListener("keypress", (event) => {
    if  (event.key === 'Enter') {
-       console.log("hi")
+        processApiData(searchInput.value)
    }
 })
+
+searchIcon.addEventListener("click", () => {
+    processApiData(searchInput.value)
+})
+
+const processApiData = (location) => {
+    getApiData(createSimpleApiQuery(location))
+        .then((res) => {
+            console.log(res)
+            createBasicWeatherDisplay(res)
+        })
+        .catch(err => console.log(err))
+
+    searchInput.value = ""
+}
 
 const createSimpleApiQuery = (location) => {
     return `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/next7days?unitGroup=metric&elements=datetime%2Cname%2Caddress%2Ctemp%2Cfeelslike%2Cdew%2Cprecip%2Csnow%2Cwindspeed%2Csunrise%2Csunset%2Cconditions%2Cdescription%2Cicon&key=FU7XFQM4A2CKKUUT4JXHP2EX5&contentType=json`
@@ -52,9 +68,4 @@ function createBasicWeatherDisplay (weather) {
     console.log(currentWeather)
 }
 
-getApiData(createSimpleApiQuery('kolding'))
-    .then((res) => {
-        console.log(res)
-        createBasicWeatherDisplay(res)
-    })
-    .catch(err => console.log(err))
+processApiData('kolding')

@@ -41,6 +41,8 @@
     top: 50%;
     transform: translateY(-50%);
     right: 25px; }
+  .header .search-icon:hover {
+    cursor: pointer; }
 
 .current-weather {
   color: white;
