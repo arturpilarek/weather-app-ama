@@ -46,7 +46,7 @@ function createBasicWeatherDisplay (weather) {
         <div class='current-weather__info'>
             <div class="city-wrapper">
                 <h2>${cityName[0].toUpperCase()}</h2>
-                <span>${cityName[1]}, ${cityName[2]}</span>
+                <span>${cityName[1]} ${cityName[2] ? ', ' + cityName[2] : ''}</span>
             </div>
             <p class="now">Lige nu:</p>
             <div class='parameter-wrapper'>
@@ -69,3 +69,11 @@ function createBasicWeatherDisplay (weather) {
 }
 
 processApiData('kolding')
+
+const detailsToggleIcon = document.getElementById("detailsToggleIcon")
+const modeDescription = document.getElementById("modeDecription")
+
+detailsToggleIcon.addEventListener("click", () => {
+    detailsToggleIcon.classList.toggle('header__details-toggle--detailed')
+    detailsToggleIcon.classList.toggle('header__details-toggle--simple')
+})

@@ -34,7 +34,7 @@
   }
   .search-icon {
     display: block;
-    background: url("/Assets/icons/carbon_search.svg") 0 0 no-repeat;
+    background: url("/Assets/icons/search-icon.svg") 0 0 no-repeat;
     height: 32px;
     width: 32px;
     position: absolute;
@@ -44,6 +44,79 @@
   }
   .search-icon:hover {
     cursor: pointer;
+  }
+  &__details-toggle {
+    &:hover {
+      cursor: pointer;
+    }
+    @include flex-center;
+    gap: 22px;
+    svg {
+      width: 46px;
+      height: 23px;
+      //#base {
+      //  .cls-1 {
+      //    fill: transparent;
+      //  }
+      //  .cls-2 {
+      //    fill:$accent-navy-blue;
+      //  }
+      //}
+      //#cirkel {
+      //  fill: $accent-navy-blue;
+      //}
+
+  }
+  }
+  &__details-toggle--simple {
+    svg {
+      #base {
+        .cls-1 {
+          fill:transparent;
+        }
+        .cls-2 {
+          fill: $accent-navy-blue;
+        }
+      }
+      #cirkel {
+        fill: $accent-navy-blue;
+        animation: move-left 0.7s ease;
+        animation-fill-mode: forwards
+      }
+    }
+    @keyframes move-left {
+      0% {
+        transform: translateX(45%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+  &__details-toggle--detailed {
+    svg {
+      #base {
+        .cls-1 {
+          fill: $accent-navy-blue;
+        }
+        .cls-2 {
+          fill:$accent-navy-blue;
+        }
+      }
+      #cirkel {
+        fill: $main-blue;
+        animation: move-right 0.7s ease;
+        animation-fill-mode: forwards
+      }
+    }
+    @keyframes move-right {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(45%);
+      }
+    }
   }
 }
 

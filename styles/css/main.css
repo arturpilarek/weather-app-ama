@@ -34,7 +34,7 @@
     position: relative; }
   .header .search-icon {
     display: block;
-    background: url("/Assets/icons/carbon_search.svg") 0 0 no-repeat;
+    background: url("/Assets/icons/search-icon.svg") 0 0 no-repeat;
     height: 32px;
     width: 32px;
     position: absolute;
@@ -43,6 +43,44 @@
     right: 25px; }
   .header .search-icon:hover {
     cursor: pointer; }
+  .header__details-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px; }
+    .header__details-toggle:hover {
+      cursor: pointer; }
+    .header__details-toggle svg {
+      width: 46px;
+      height: 23px; }
+  .header__details-toggle--simple svg #base .cls-1 {
+    fill: transparent; }
+  .header__details-toggle--simple svg #base .cls-2 {
+    fill: #111C34; }
+  .header__details-toggle--simple svg #cirkel {
+    fill: #111C34;
+    animation: move-left 0.7s ease;
+    animation-fill-mode: forwards; }
+
+@keyframes move-left {
+  0% {
+    transform: translateX(45%); }
+  100% {
+    transform: translateX(0); } }
+  .header__details-toggle--detailed svg #base .cls-1 {
+    fill: #111C34; }
+  .header__details-toggle--detailed svg #base .cls-2 {
+    fill: #111C34; }
+  .header__details-toggle--detailed svg #cirkel {
+    fill: #8EB1C7;
+    animation: move-right 0.7s ease;
+    animation-fill-mode: forwards; }
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(45%); } }
 
 .current-weather {
   color: white;
@@ -93,6 +131,5 @@ h1 {
 
 body {
   padding: 25px 85px;
-  background: linear-gradient(180deg, #8FA5B7 0%, #111C34 100%) no-repeat; }
-  body section {
-    font-size: 2rem; }
+  background: linear-gradient(180deg, #8FA5B7 0%, #111C34 100vh) no-repeat;
+  min-height: 100vh; }
