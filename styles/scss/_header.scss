@@ -27,10 +27,10 @@
     width: 475px;
     height: 50px;
     border: 2px solid $accent-navy-blue;
-    //background-color: transparent;
     border-radius: 26px;
     padding: 0.4em 1em;
     position: relative;
+    background-color: $main-blue;
   }
   .search-icon {
     display: block;
@@ -54,18 +54,6 @@
     svg {
       width: 46px;
       height: 23px;
-      //#base {
-      //  .cls-1 {
-      //    fill: transparent;
-      //  }
-      //  .cls-2 {
-      //    fill:$accent-navy-blue;
-      //  }
-      //}
-      //#cirkel {
-      //  fill: $accent-navy-blue;
-      //}
-
   }
   }
   &__details-toggle--simple {

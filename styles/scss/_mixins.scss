@@ -1,3 +1,4 @@
+//Flex
 @mixin flex() {
   display: flex;
   align-items: center;
@@ -7,5 +8,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+//RWD mixins
+@mixin extra-small {
+  @media (max-width: #{$small-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-down {
+  @media (max-width: #{$medium-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-only {
+  @media (min-width: #{$small-width}) and (max-width: #{$medium-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-up {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin medium-only {
+  @media (min-width: #{$medium-width}) and (max-width: #{$large-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin medium-down {
+  @media (max-width: #{$large-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
 }
 

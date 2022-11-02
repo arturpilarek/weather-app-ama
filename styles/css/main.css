@@ -31,7 +31,8 @@
     border: 2px solid #111C34;
     border-radius: 26px;
     padding: 0.4em 1em;
-    position: relative; }
+    position: relative;
+    background-color: #8EB1C7; }
   .header .search-icon {
     display: block;
     background: url("/Assets/icons/search-icon.svg") 0 0 no-repeat;
@@ -85,13 +86,19 @@
 .current-weather {
   color: white;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 4rem;
   padding: 6rem; }
+  @media (max-width: 1023px) {
+    .current-weather {
+      flex-direction: column;
+      gap: 0; } }
   .current-weather img {
     width: 20rem; }
+    @media (max-width: 1023px) {
+      .current-weather img {
+        width: 15em; } }
   .current-weather__info {
     width: 20rem; }
     .current-weather__info .city-wrapper {
