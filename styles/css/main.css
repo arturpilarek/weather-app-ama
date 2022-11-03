@@ -189,7 +189,10 @@
       color: white;
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      padding: 0 3rem; }
+      .nextdaysweather__expanded-info .hour-segment:not(:first-of-type) {
+        border-left: 1px solid white; }
       .nextdaysweather__expanded-info .hour-segment__weather-icon {
         width: 80px;
         height: auto; }
