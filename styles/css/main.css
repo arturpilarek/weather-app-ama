@@ -167,9 +167,6 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif; }
 
-h1 {
-  color: blue; }
-
 body {
   padding: 25px 85px;
   background: linear-gradient(180deg, #8FA5B7 0%, #111C34 100vh) no-repeat;
