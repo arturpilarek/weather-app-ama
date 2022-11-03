@@ -30,7 +30,21 @@ export function createSixDayForecast (days){
         </svg>
         </div>
     </div>
-    <div class="nextdaysweather__expanded-info">${renderExpandedWeatherView(days[i].hours)}</div>
+    <div class="nextdaysweather__expanded-info">
+        <div class="hour-segment-wrapper">
+            ${renderExpandedWeatherView(days[i].hours)}
+        </div>
+        <div class="sun-state-wrapper">
+            <div class="sunrise">
+                <img src="./Assets/icons/sunrise-icon.svg">
+                <p>${days[i].sunrise.slice(0, -3)}</p>
+            </div>
+            <div class="sunset">
+                <img src="./Assets/icons/sunset-icon.svg">
+                <p>${days[i].sunset.slice(0, -3)}</p>
+</div>
+        </div>
+    </div>
     </div>
     `
     }
@@ -75,7 +89,6 @@ const renderSegmentedHoursArray = (hoursArray) => {
 
 const renderExpandedWeatherView = (hoursArray) => {
     const hoursArraySegmented = renderSegmentedHoursArray(hoursArray)
-    console.log(hoursArraySegmented)
     let HTMLOutput = ""
     hoursArraySegmented.forEach(segment => {
         HTMLOutput += `

@@ -53,7 +53,7 @@
       border-bottom-right-radius: 10px;
     }
     &--expanded {
-      max-height: 450px;
+      max-height: 482px;
       transition: max-height 0.3s ease-in-out;
     }
     &--hidden {
@@ -64,21 +64,26 @@
   &__expanded-info {
     border-top: 1px solid white;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 40px;
     width: 100%;
+    .hour-segment-wrapper {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
     .hour-segment {
-      position: relative;
-      &:before {
-        content: "";
-        position: absolute;
-        display: block;
-        background-color: white;
-        width: 1px;
-        height: 100%;
-        top: 0;
-        right: -100%;
-      }
+      //position: relative;
+      //&:not(:last-child):before {
+      //  content: "";
+      //  position: absolute;
+      //  display: block;
+      //  background-color: white;
+      //  width: 1px;
+      //  height: 100%;
+      //  top: 0;
+      //  right: -150%;
+      //}
       color: white;
       display: flex;
       flex-direction: column;
@@ -97,6 +102,20 @@
         .mini-rain-icon, .mini-wind-icon {
           width: 11px;
           height: auto;
+        }
+      }
+    }
+    .sun-state-wrapper {
+      margin-top: 25px;
+      align-self: center;
+      @include flex-center;
+      gap: 50px;
+      .sunset, .sunrise {
+        @include flex-center;
+        gap: 0.75rem;
+        p {
+          color: white;
+          margin: 0;
         }
       }
     }
