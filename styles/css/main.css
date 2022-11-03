@@ -129,6 +129,40 @@
       .current-weather__info .parameter-wrapper .small-text {
         font-size: 12px; }
 
+.nextdayweather {
+  display: flex;
+  flex-direction: column; }
+  .nextdayweather__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    border: 1px solid white; }
+    .nextdayweather__info:first-of-type {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    .nextdayweather__info:last-of-type {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+    .nextdayweather__info .icon-wrapper img {
+      height: 1.2rem; }
+    .nextdayweather__info .parameter-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      color: white; }
+      .nextdayweather__info .parameter-wrapper img {
+        width: 1.2rem;
+        height: auto; }
+      .nextdayweather__info .parameter-wrapper .small-text {
+        font-size: 12px; }
+
+.yellow-text {
+  color: #F8D047;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500; }
+
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif; }

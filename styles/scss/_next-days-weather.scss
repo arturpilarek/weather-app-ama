@@ -1,68 +1,48 @@
-h3{
-    position: absolute;
-  width: 286px;
-  height: 53px;
-  left: 84px;
-  top: 537px;
-  
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 150%;
-  /* or 45px */
-  
+.nextdayweather {
   display: flex;
-  align-items: center;
-  letter-spacing: -0.011em;
-  
-  color: #F8D047;
+  flex-direction: column;
+  &__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    border: 1px solid white;
+    &:first-of-type {
+      border-top-left-radius: 10px ;
+      border-top-right-radius: 10px;
+    }
+    &:last-of-type {
+      border-bottom-left-radius: 10px ;
+      border-bottom-right-radius: 10px;
+    }
+    .icon-wrapper {
+      img {
+        height: 1.2rem;
+      }
+    }
+    .parameter-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      color: white;
+
+      img {
+          width: 1.2rem;
+          height: auto;
+      }
+
+      .small-text {
+          font-size: $text-small;
+      }
+
   }
-  
-  .idag{
-   /* I dag */
-  
-  
-  position: absolute;
-  width: 41px;
-  height: 24px;
-  left: 125px;
-  top: 627px;
-  
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  /* identical to box height, or 24px */
-  
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.011em;
-  
-  color: #161515;
   }
-.dag2{
-    /* 2. November */
+}
 
-
-position: absolute;
-width: 102px;
-height: 24px;
-left: 125px;
-top: 692px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 150%;
-/* identical to box height, or 24px */
-
-display: flex;
-align-items: center;
-letter-spacing: -0.011em;
-
-color: #FFFFFF;
+.yellow-text {
+  color: $accent-orange;
+                font-family: $family-barlow;
+                font-weight: 500;
 }
   
