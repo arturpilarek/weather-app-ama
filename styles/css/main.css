@@ -32,7 +32,7 @@
     border-radius: 26px;
     padding: 0.4em 1em;
     position: relative;
-    background-color: #8EB1C7; }
+    background-color: transparent; }
   .header .search-icon {
     display: block;
     background: url("/Assets/icons/search-icon.svg") 0 0 no-repeat;
@@ -129,34 +129,105 @@
       .current-weather__info .parameter-wrapper .small-text {
         font-size: 12px; }
 
-.nextdayweather {
+.nextdaysweather {
   display: flex;
   flex-direction: column; }
-  .nextdayweather__info {
+  .nextdaysweather__info {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    color: white;
     justify-content: space-between;
-    padding: .5rem 1rem;
-    border: 1px solid white; }
-    .nextdayweather__info:first-of-type {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px; }
-    .nextdayweather__info:last-of-type {
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px; }
-    .nextdayweather__info .icon-wrapper img {
-      height: 1.2rem; }
-    .nextdayweather__info .parameter-wrapper {
+    padding: .5rem 1rem; }
+    .nextdaysweather__info:hover {
+      cursor: pointer; }
+    .nextdaysweather__info .small-weather-icon-wrapper img {
+      width: 39px;
+      height: auto; }
+    .nextdaysweather__info .parameter-wrapper {
+      width: 12rem;
       display: flex;
       flex-direction: row;
-      gap: 1rem;
-      color: white; }
-      .nextdayweather__info .parameter-wrapper img {
-        width: 1.2rem;
+      gap: 1rem; }
+      .nextdaysweather__info .parameter-wrapper img {
         height: auto; }
-      .nextdayweather__info .parameter-wrapper .small-text {
+      .nextdaysweather__info .parameter-wrapper .small-temp-icon {
+        width: 12.8px; }
+      .nextdaysweather__info .parameter-wrapper .small-rain-icon, .nextdaysweather__info .parameter-wrapper .small-wind-icon {
+        width: 16px; }
+      .nextdaysweather__info .parameter-wrapper .small-text {
         font-size: 12px; }
+  .nextdaysweather__date {
+    width: 110px; }
+  .nextdaysweather-wrapper {
+    max-height: 69px;
+    overflow: hidden;
+    border: 1px solid white; }
+    .nextdaysweather-wrapper:first-of-type {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    .nextdaysweather-wrapper:last-of-type {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; }
+    .nextdaysweather-wrapper--expanded {
+      max-height: 450px;
+      transition: max-height 0.3s ease-in-out; }
+    .nextdaysweather-wrapper--hidden {
+      max-height: 69px;
+      transition: max-height 0.3s ease-in-out; }
+  .nextdaysweather__expanded-info {
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width: 100%; }
+    .nextdaysweather__expanded-info .hour-segment {
+      position: relative;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .nextdaysweather__expanded-info .hour-segment:before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: white;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: -100%; }
+      .nextdaysweather__expanded-info .hour-segment__weather-icon {
+        width: 80px;
+        height: auto; }
+      .nextdaysweather__expanded-info .hour-segment .mini-parameter-wrapper {
+        display: flex;
+        gap: 0.8rem; }
+        .nextdaysweather__expanded-info .hour-segment .mini-parameter-wrapper .mini-temp-icon {
+          width: 8px;
+          height: auto; }
+        .nextdaysweather__expanded-info .hour-segment .mini-parameter-wrapper .mini-rain-icon, .nextdaysweather__expanded-info .hour-segment .mini-parameter-wrapper .mini-wind-icon {
+          width: 11px;
+          height: auto; }
+
+.chevron-wrapper--rotate-right {
+  animation: rotate90deg 0.3s ease;
+  animation-fill-mode: forwards; }
+
+@keyframes rotate90deg {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(90deg); } }
+
+.chevron-wrapper--rotate-default {
+  animation: rotateBack 0.3s ease;
+  animation-fill-mode: forwards; }
+
+@keyframes rotateBack {
+  from {
+    transform: rotate(90deg); }
+  to {
+    transform: rotate(0deg); } }
 
 .yellow-text {
   color: #F8D047;
@@ -169,5 +240,5 @@
 
 body {
   padding: 25px 85px;
-  background: linear-gradient(180deg, #8FA5B7 0%, #111C34 100vh) no-repeat;
+  background: linear-gradient(180deg, #8FA5B7 10vh, #111C34 100vh) no-repeat;
   min-height: 100vh; }

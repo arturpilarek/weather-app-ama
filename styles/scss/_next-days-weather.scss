@@ -1,12 +1,48 @@
-.nextdayweather {
+.nextdaysweather {
   display: flex;
   flex-direction: column;
   &__info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+    @include flex-center;
+      color: white;
     justify-content: space-between;
     padding: .5rem 1rem;
+
+    .small-weather-icon-wrapper {
+      img {
+        width: 39px;
+        height: auto;
+      }
+    }
+    .parameter-wrapper {
+      width: 12rem;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      img {
+        height: auto;
+      }
+      .small-temp-icon {
+        width: 12.8px;
+      }
+      .small-rain-icon, .small-wind-icon {
+        width: 16px;
+      }
+      .small-text {
+          font-size: $text-small;
+      }
+
+  }
+  }
+  &__date {
+    width: 110px;
+  }
+  &-wrapper {
+    max-height: 69px;
+    overflow: hidden;
     border: 1px solid white;
     &:first-of-type {
       border-top-left-radius: 10px ;
@@ -16,27 +52,82 @@
       border-bottom-left-radius: 10px ;
       border-bottom-right-radius: 10px;
     }
-    .icon-wrapper {
-      img {
-        height: 1.2rem;
+    &--expanded {
+      max-height: 450px;
+      transition: max-height 0.3s ease-in-out;
+    }
+    &--hidden {
+      max-height: 69px;
+      transition: max-height 0.3s ease-in-out;
+    }
+  }
+  &__expanded-info {
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width: 100%;
+    .hour-segment {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: white;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: -100%;
+      }
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__weather-icon {
+        width: 80px;
+        height: auto;
+      }
+      .mini-parameter-wrapper {
+        display: flex;
+        gap: 0.8rem;
+        .mini-temp-icon {
+          width: 8px;
+          height: auto;
+        }
+        .mini-rain-icon, .mini-wind-icon {
+          width: 11px;
+          height: auto;
+        }
       }
     }
-    .parameter-wrapper {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      color: white;
-
-      img {
-          width: 1.2rem;
-          height: auto;
-      }
-
-      .small-text {
-          font-size: $text-small;
-      }
-
   }
+}
+
+
+
+.chevron-wrapper--rotate-right {
+  animation: rotate90deg 0.3s ease;
+  animation-fill-mode: forwards
+}
+@keyframes rotate90deg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+  transform: rotate(90deg);
+  }
+}
+
+.chevron-wrapper--rotate-default {
+  animation: rotateBack 0.3s ease;
+  animation-fill-mode: forwards
+}
+@keyframes rotateBack {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 
