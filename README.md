@@ -1,5 +1,5 @@
 # weather-app-ama
-
+run npm install for node modules
 ## Sass setup
 Run npm run sass to launch sass watcher
 
