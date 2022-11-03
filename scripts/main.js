@@ -22,20 +22,25 @@ const createSimpleApiQuery = (location) => {
     return `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/next7days?unitGroup=metric&elements=datetime%2Cname%2Caddress%2Ctemp%2Cfeelslike%2Cdew%2Cprecip%2Csnow%2Cwindspeed%2Csunrise%2Csunset%2Cconditions%2Cdescription%2Cicon&key=FU7XFQM4A2CKKUUT4JXHP2EX5&contentType=json`
 }
 
+const createErrorWindow = (err) => {
+    const outputContainer = document.getElementById("current-weather")
+    outputContainer.innerHTML = `Sorry, I couldn't fetch data. Try with a different location`
+}
+
 const processApiData = (location) => {
     getApiData(createSimpleApiQuery(location))
         .then((res) => {
             console.log(res)
             createBasicWeatherDisplay(res)
         })
-        .catch(err => console.log(err))
+        .catch(err => createErrorWindow(err))
 
     searchInput.value = ""
 }
 
-
 //Get Kolding's data on load, in the future get user's location and display it instead
 processApiData('kolding')
+
 
 const detailsToggleIcon = document.getElementById("detailsToggleIcon")
 const modeDescription = document.getElementById("modeDecription")

@@ -1,9 +1,9 @@
 import { convertKmphToMps } from './helpers.js'
 
 export function createBasicWeatherDisplay (weather) {
-    let output = document.getElementById('current-weather')
-    let currentWeather = weather.currentConditions
-    let cityName = weather.resolvedAddress.split(', ')
+    const output = document.getElementById('current-weather')
+    const currentWeather = weather.currentConditions
+    const cityName = weather.resolvedAddress.split(', ')
 
     output.innerHTML = `
         <img src='./Assets/icons/weather-icons/${currentWeather.icon}.png'>
